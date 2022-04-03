@@ -6,7 +6,7 @@ import { existsSync, writeFileSync, readFileSync } from 'fs';
 
 const TMP_FILE = tmpdir()+'/gpio_debug.json';
 class Gpio {
-  static states:Array<number> = new Array<number>(40);
+  static states:number[] = new Array<number>(40);
 
   private gpio = 0;
   private original: GpioOriginal | undefined = undefined;
