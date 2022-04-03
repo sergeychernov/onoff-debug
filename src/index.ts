@@ -28,7 +28,7 @@ class Gpio {
   }
   info() {
     if (!this.original) {
-        console.info(Gpio.states);
+      console.info(Gpio.states);
     }
   }
   readSync() {
