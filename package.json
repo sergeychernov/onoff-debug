@@ -1,6 +1,6 @@
 {
   "name": "onoff-debug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The module for debugging onoff module without raspberry pi",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,11 +10,11 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json"
   },
@@ -22,7 +22,11 @@
     "type": "git",
     "url": "git+https://github.com/sergeychernov/onoff-debug.git"
   },
-  "keywords": ["raspberry", "pi", "debug"],
+  "keywords": [
+    "raspberry",
+    "pi",
+    "debug"
+  ],
   "author": "sergeychernov",
   "license": "ISC",
   "bugs": {

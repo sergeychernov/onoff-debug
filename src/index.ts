@@ -8,7 +8,7 @@ class Gpio {
     try {
       this.original = new GpioOriginal(gpio, direction, edge, options);
     } catch (e) {
-        console.info('The Debug Mode is on');
+      console.info('The Debug Mode is on');
       this.gpio = gpio;
     }
   }
