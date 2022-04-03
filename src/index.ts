@@ -26,10 +26,8 @@ class Gpio {
       }
     }
   }
-  info() {
-    if (!this.original) {
-      console.info(Gpio.states);
-    }
+  static info() {
+    console.info(Gpio.states);
   }
   readSync() {
     if (this.original) {
