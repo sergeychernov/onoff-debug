@@ -16,7 +16,7 @@ class Gpio {
     } catch (e) {
       console.info('The Debug Mode is on');
       this.gpio = gpio;
-
+      Gpio.init();
       if (options.reconfigureDirection !== false) {
         Gpio.states[this.gpio] = 0;
         writeFileSync(TMP_FILE, JSON.stringify(Gpio.states));
