@@ -16,7 +16,7 @@ class Gpio {
     } catch (e) {
       console.info('The Debug Mode is on');
       this.gpio = gpio;
-      
+
       if (options.reconfigureDirection !== false) {
         Gpio.states[this.gpio] = 0;
         writeFileSync(TMP_FILE, JSON.stringify(Gpio.states));
@@ -25,12 +25,12 @@ class Gpio {
   }
   static init() {
     if (!existsSync(TMP_FILE)) {
-        writeFileSync(TMP_FILE, JSON.stringify(Gpio.states.fill(0)));
+      writeFileSync(TMP_FILE, JSON.stringify(Gpio.states.fill(0)));
     }
     Gpio.states = JSON.parse(readFileSync(TMP_FILE, 'utf8'));
   }
   static info() {
-      Gpio.init();
+    Gpio.init();
     console.info(Gpio.states);
   }
   readSync() {

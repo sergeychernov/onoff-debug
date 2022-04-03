@@ -1,6 +1,6 @@
 {
   "name": "onoff-debug",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "The module for debugging onoff module without raspberry pi",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
